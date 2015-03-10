@@ -1,0 +1,30 @@
+.inappnotifs{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 50px 50px 0;
+}
+
+.inappnotifs .inappnotif {
+  height: 45px;
+  min-width: 220px;
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+  padding: 0 10px;
+  line-height: 44px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.inappnotifs .inappnotif.success {
+  color: green;
+}
+
+.inappnotifs .inappnotif.error {
+  color: red;
+}
+
+.inappnotifs .inappnotif-hide {
+  opacity: 0;
+}

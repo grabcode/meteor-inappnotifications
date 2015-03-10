@@ -1,0 +1,13 @@
+<template name="inappnotifs">
+  <div class="inappnotifs">
+  {{#each notifs}}
+    {{>inappnotif}}
+  {{/each}}
+  </div>
+</template>
+
+<template name="inappnotif">
+  <div class="inappnotif {{type}}">
+    <p>{{{content}}}</p>
+  </div>
+</template>
