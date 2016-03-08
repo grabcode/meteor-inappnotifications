@@ -6,6 +6,8 @@
 }
 
 .inappnotifs .inappnotif {
+  position: relative;
+  bottom: -100px;
   height: 45px;
   min-width: 220px;
   background-color: black;

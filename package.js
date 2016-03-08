@@ -1,6 +1,6 @@
 Package.describe({
   name: 'grabthecode:inappnotifications',
-  version: '1.0.0',
+  version: '1.1.0',
   summary: 'InAppNotifications package handles post action message to notify the user of a success or error.',
   git: 'git@github.com:grabcode/meteor-inappnotifications.git',
   documentation: 'README.md'

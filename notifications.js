@@ -6,6 +6,13 @@ _deps = {
 
 InAppNotifs.stack = [];
 
+InAppNotifs.config = function(options) {
+  _.extend(this, {
+    template: 'inappnotif'
+  }, options);
+  return this;
+}
+
 InAppNotifs.push = function(notif){
   var time  = new Date().getTime()
     , notif = _.extend({
@@ -37,6 +44,9 @@ InAppNotifs.push = function(notif){
 }
 
 Template.inappnotifs.helpers({
+  tmpl: function() {
+    return InAppNotifs.template;
+  },
   notifs: function () {
     _deps.notifs.depend();
     return InAppNotifs.stack.reverse();
@@ -51,18 +61,15 @@ Template.inappnotifs.rendered = function(){
   container._uihooks = {
     insertElement: function(node, next) {
       var $node = $(node);
-
-      $node.css('opacity', 0);
       container.insertBefore(node, next);
-
       $node.animate({
-        opacity: 1
-      }, 600);
+        bottom: "0"
+      }, 200);
     },
     removeElement: function(node) {
       $(node).animate({
-        opacity: 0
-      }, 600, function() {
+        bottom: "-100px"
+      }, 200, function() {
         $(this).remove();
       });
     }

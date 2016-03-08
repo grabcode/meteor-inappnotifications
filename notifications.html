@@ -1,13 +1,15 @@
 <template name="inappnotifs">
   <div class="inappnotifs">
   {{#each notifs}}
-    {{>inappnotif}}
+    {{> UI.dynamic template=tmpl }}
   {{/each}}
   </div>
 </template>
 
 <template name="inappnotif">
   <div class="inappnotif {{type}}">
-    <p>{{{content}}}</p>
+    <p>
+      {{{content}}}
+    </p>
   </div>
 </template>
