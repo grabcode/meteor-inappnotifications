@@ -54,7 +54,7 @@ Template.inappnotifs.helpers({
 });
 
 
-Template.inappnotifs.rendered = function(){
+Template.inappnotifs.onRendered( function(){
 
   var container = this.find(".inappnotifs");
 
@@ -75,4 +75,4 @@ Template.inappnotifs.rendered = function(){
     }
   };
 
-};
+});
